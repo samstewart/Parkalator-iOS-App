@@ -7,7 +7,7 @@
 //
 
 #import "PLServerRequest.h"
-#import "SBJsonParser.h"
+#import "JSON.h"
 
 @interface PLServerRequest ()
 /** Converts keys/values (both should be strings) from dictionary into a query string. (starts with "?")
@@ -18,11 +18,11 @@
 @implementation PLServerRequest
 @synthesize requestURL=_requestURL, delegate, parameters, requestQuery;
 
-- (id)init
+- (id)initWithDelegate:(id<PLServerRequestDelegate>)del 
 {
     self = [super init];
     if (self) {
-        //init code here
+        self.delegate = del;
     }
     
     return self;
@@ -40,7 +40,7 @@
     NSAssert(conn, @"Could not create url connection");
     
     if (dataBuffer) [dataBuffer release], dataBuffer = nil;;
-    dataBuffer = [[NSMutableData dataWithLength:100] retain];
+    dataBuffer = [[NSMutableData dataWithCapacity:1000] retain];
     
 }
 - (void)requestSucceeded:(id)jsonResponse {
@@ -53,7 +53,17 @@
 }
 
 #pragma mark URL Generation and override points
-
+- (NSString*)requestQuery {
+    NSString *query = [self queryFromParams:self.parameters];
+    NSLog(@"Request query: %@", query);
+    
+    return query;
+}
+- (NSString*)requestURL {
+    NSAssert(NO, @"PLServerRequest is an abstract class and should not be used directly. Use a subclasses");
+    //usually use PL_URL + requestQuery
+    return nil;
+}
 - (NSString*)queryFromParams:(NSDictionary *)params {
     NSArray *keys = [params allKeys];
     
@@ -65,26 +75,15 @@
     
     for (NSString *key in keys) {
         NSString *value = [params objectForKey:key];
-        if (!isFirst) {
-            isFirst = NO;
+        if (!isFirst)
             [queryStr appendString:@"&"];
-        }
+        else
+            isFirst = NO;
         
         [queryStr appendFormat:@"%@=%@", key, value];
         
     }
     return queryStr;
-}
-- (NSString*)requestQuery {
-    NSString *query = [self queryFromParams:parameters];
-    NSLog(@"Request query: %@", query);
-    
-    return query;
-}
-- (NSString*)requestURL {
-    NSAssert(NO, @"PLServerRequest is an abstract class and should not be used directly. Use a subclasses");
-    //usually use PL_URL + requestQuery
-    return nil;
 }
 #pragma mark NSURLConnection Callback methods
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
@@ -97,28 +96,27 @@
     [self requestFailed:error];
 }
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    //parse into json, every time
+    
     NSString *json_str = [[NSString alloc] initWithData:dataBuffer encoding:NSUTF8StringEncoding];
     
-    [dataBuffer release], dataBuffer = nil;
-    [connection release], connection = nil;
-    
-    if (!_parser) _parser = [[SBJsonParser alloc] init];
-    
     NSError *error = nil;
-    id jsonObject = [_parser objectWithString:json_str error:&error];
-    [json_str release];
+    id jsonObject = [json_str JSONValue];
     
-    
+    /*
     if (error)
         [self requestFailed:error];
     else
-        [self requestSucceeded:jsonObject];
+     */
+    [self requestSucceeded:jsonObject];
+    
+    [json_str release];
+    [dataBuffer release], dataBuffer = nil;
+    [connection release], connection = nil;
 }
 - (void)dealloc {
+    [delegate release], delegate = nil;
     [parameters release], parameters = nil;
     [dataBuffer release], dataBuffer = nil;
-    [_parser release], _parser = nil;
     [super dealloc];
 }
 @end

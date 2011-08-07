@@ -9,12 +9,12 @@
 #import "PLMeterBlock.h"
 
 @implementation PLMeterBlockAnnotation
-@synthesize coordinate;
+@synthesize coordinate=_coordinate;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coor {
     self = [super init];
     if (self) {
-        self.coordinate = coor;
+        _coordinate = coor;
     }
     return self;
 }

@@ -10,10 +10,13 @@
  You should hook into the delegate to receive parking meter updates.
  */
 #import "PLServerRequest.h"
+#import <CoreLocation/CoreLocation.h>
 
 @protocol PLServerMetersRequestDelegate <NSObject, PLServerRequestDelegate>
 
 @end
+
 @interface PLServerMetersRequest : PLServerRequest
 
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @end

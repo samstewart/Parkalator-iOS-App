@@ -27,11 +27,15 @@
         refreshRate = 5;
         metersCache = [[NSMutableArray arrayWithCapacity:3000] retain];
         hasLoaded = NO;
+        _metersRequest = [[PLServerMetersRequest alloc] initWithDelegate:self];
     }
     
     return self;
 }
 - (void)start {
+    //start initial request
+    [_metersRequest send];
+    
     if (refreshTimer)  [refreshTimer release], refreshTimer = nil;
     refreshTimer = [[NSTimer scheduledTimerWithTimeInterval:self.refreshRate 
                                                      target:self 
@@ -70,7 +74,10 @@
 - (void)refreshMeters {
     if (hasLoaded) {
         hasLoaded = NO;
-         NSLog(@"Refreshing parking meters..");
+        NSLog(@"Refreshing parking meters..");
+        
+        [_metersRequest send];
+        
     } else {
         NSLog(@"not refreshing because we haven't finished");
     }

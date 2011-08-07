@@ -21,7 +21,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "PLServerRequest.h"
 
-@protocol PLParkingMapModelDelegate <NSObject, PLServerRequestDelegate>
+@protocol PLParkingMapModelDelegate <NSObject>
 /** Called when we load a set of parking meters. You are passed an array of PLMeterBlocks.
  Note: DEPRECATED*/
 - (void)meterBlocksLoaded:(NSArray*)meterBlocks atPage:(NSInteger)index;
@@ -30,7 +30,7 @@
 @end
 
 @class PLServerMetersRequest;
-@interface PLParkingMapModel : NSObject {
+@interface PLParkingMapModel : NSObject <PLServerRequestDelegate> {
     PLServerMetersRequest *_metersRequest;
     NSTimer *refreshTimer;
     BOOL isRunning;

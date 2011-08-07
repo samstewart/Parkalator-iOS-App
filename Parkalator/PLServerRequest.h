@@ -27,14 +27,14 @@
 @class SBJsonParser;
 @interface PLServerRequest : NSObject {
     NSMutableData *dataBuffer;
-    
-    SBJsonParser *_parser;
 }
 
 - (void)send;
 //override points for subclasses..
 - (void)requestSucceeded:(id)jsonResponse;
 - (void)requestFailed:(NSError*)error;
+
+- (id)initWithDelegate:(id <PLServerRequestDelegate>) del;
 
 @property (nonatomic, retain) id <PLServerRequestDelegate> delegate;
 @property (nonatomic, readonly) NSString *requestURL;
