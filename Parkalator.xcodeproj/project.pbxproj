@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3CFD2413EDDE420069A094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD2313EDDE420069A094 /* UIKit.framework */; };
+		1D3CFD2613EDDE420069A094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD2513EDDE420069A094 /* Foundation.framework */; };
+		1D3CFD2813EDDE420069A094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD2713EDDE420069A094 /* CoreGraphics.framework */; };
+		1D3CFD2A13EDDE420069A094 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD2913EDDE420069A094 /* CoreData.framework */; };
+		1D3CFD3013EDDE420069A094 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CFD2E13EDDE420069A094 /* InfoPlist.strings */; };
+		1D3CFD3213EDDE430069A094 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD3113EDDE430069A094 /* main.m */; };
+		1D3CFD3613EDDE430069A094 /* ParkalatorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD3513EDDE430069A094 /* ParkalatorAppDelegate.m */; };
+		1D3CFD3913EDDE430069A094 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CFD3713EDDE430069A094 /* MainWindow.xib */; };
+		1D3CFD3C13EDDE430069A094 /* Parkalator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD3A13EDDE430069A094 /* Parkalator.xcdatamodeld */; };
+		1D3CFD4413EDDE430069A094 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD4313EDDE430069A094 /* SenTestingKit.framework */; };
+		1D3CFD4513EDDE430069A094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD2313EDDE420069A094 /* UIKit.framework */; };
+		1D3CFD4613EDDE430069A094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD2513EDDE420069A094 /* Foundation.framework */; };
+		1D3CFD4713EDDE430069A094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD2713EDDE420069A094 /* CoreGraphics.framework */; };
+		1D3CFD4813EDDE430069A094 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD2913EDDE420069A094 /* CoreData.framework */; };
+		1D3CFD5013EDDE430069A094 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CFD4E13EDDE430069A094 /* InfoPlist.strings */; };
+		1D3CFD5213EDDE430069A094 /* ParkalatorTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CFD5113EDDE430069A094 /* ParkalatorTests.h */; };
+		1D3CFD5413EDDE430069A094 /* ParkalatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD5313EDDE430069A094 /* ParkalatorTests.m */; };
+		1D3CFD5F13EDE1960069A094 /* PLServerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD5E13EDE1960069A094 /* PLServerAPI.m */; };
+		1D3CFD6313EDE3C20069A094 /* PLServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD6213EDE3C20069A094 /* PLServerRequest.m */; };
+		1D3CFD6713EDE4280069A094 /* PLServerMetersRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD6613EDE4280069A094 /* PLServerMetersRequest.m */; };
+		1D3CFD8213EDE6130069A094 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD6C13EDE6130069A094 /* NSObject+SBJson.m */; };
+		1D3CFD8313EDE6130069A094 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD6F13EDE6130069A094 /* SBJsonParser.m */; };
+		1D3CFD8413EDE6130069A094 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD7113EDE6130069A094 /* SBJsonStreamParser.m */; };
+		1D3CFD8513EDE6130069A094 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD7313EDE6130069A094 /* SBJsonStreamParserAccumulator.m */; };
+		1D3CFD8613EDE6130069A094 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD7513EDE6130069A094 /* SBJsonStreamParserState.m */; };
+		1D3CFD8713EDE6130069A094 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD7713EDE6130069A094 /* SBJsonStreamWriter.m */; };
+		1D3CFD8813EDE6130069A094 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD7913EDE6130069A094 /* SBJsonStreamWriterAccumulator.m */; };
+		1D3CFD8913EDE6130069A094 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD7B13EDE6130069A094 /* SBJsonStreamWriterState.m */; };
+		1D3CFD8A13EDE6130069A094 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD7D13EDE6130069A094 /* SBJsonTokeniser.m */; };
+		1D3CFD8B13EDE6130069A094 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD7F13EDE6130069A094 /* SBJsonUTF8Stream.m */; };
+		1D3CFD8C13EDE6130069A094 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD8113EDE6130069A094 /* SBJsonWriter.m */; };
+		1D3CFD9413EDED880069A094 /* PLParkingMapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD9313EDED880069A094 /* PLParkingMapModel.m */; };
+		1D3CFD9713EDF1910069A094 /* PLParkingStatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD9613EDF1910069A094 /* PLParkingStatModel.m */; };
+		1D3CFD9A13EDF29A0069A094 /* PLParkingMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD9913EDF29A0069A094 /* PLParkingMap.m */; };
+		1D3CFD9C13EDF30E0069A094 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFD9B13EDF30E0069A094 /* MapKit.framework */; };
+		1D3CFD9F13EDFAA20069A094 /* PLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFD9E13EDFAA20069A094 /* PLLocationManager.m */; };
+		1D3CFDA113EDFBDD0069A094 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3CFDA013EDFBDD0069A094 /* CoreLocation.framework */; };
+		1D3CFDA413EE00B90069A094 /* PLMeterBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CFDA313EE00B90069A094 /* PLMeterBlock.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D3CFD4913EDDE430069A094 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D3CFD1613EDDE420069A094 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D3CFD1E13EDDE420069A094;
+			remoteInfo = Parkalator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D3CFD1F13EDDE420069A094 /* Parkalator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parkalator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3CFD2313EDDE420069A094 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1D3CFD2513EDDE420069A094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3CFD2713EDDE420069A094 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D3CFD2913EDDE420069A094 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1D3CFD2D13EDDE420069A094 /* Parkalator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Parkalator-Info.plist"; sourceTree = "<group>"; };
+		1D3CFD2F13EDDE420069A094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D3CFD3113EDDE430069A094 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D3CFD3313EDDE430069A094 /* Parkalator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Parkalator-Prefix.pch"; sourceTree = "<group>"; };
+		1D3CFD3413EDDE430069A094 /* ParkalatorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParkalatorAppDelegate.h; sourceTree = "<group>"; };
+		1D3CFD3513EDDE430069A094 /* ParkalatorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParkalatorAppDelegate.m; sourceTree = "<group>"; };
+		1D3CFD3813EDDE430069A094 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1D3CFD3B13EDDE430069A094 /* Parkalator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Parkalator.xcdatamodel; sourceTree = "<group>"; };
+		1D3CFD4213EDDE430069A094 /* ParkalatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkalatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3CFD4313EDDE430069A094 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1D3CFD4D13EDDE430069A094 /* ParkalatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParkalatorTests-Info.plist"; sourceTree = "<group>"; };
+		1D3CFD4F13EDDE430069A094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D3CFD5113EDDE430069A094 /* ParkalatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParkalatorTests.h; sourceTree = "<group>"; };
+		1D3CFD5313EDDE430069A094 /* ParkalatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParkalatorTests.m; sourceTree = "<group>"; };
+		1D3CFD5D13EDE1960069A094 /* PLServerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLServerAPI.h; sourceTree = "<group>"; };
+		1D3CFD5E13EDE1960069A094 /* PLServerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLServerAPI.m; sourceTree = "<group>"; };
+		1D3CFD6113EDE3C20069A094 /* PLServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLServerRequest.h; sourceTree = "<group>"; };
+		1D3CFD6213EDE3C20069A094 /* PLServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLServerRequest.m; sourceTree = "<group>"; };
+		1D3CFD6513EDE4280069A094 /* PLServerMetersRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLServerMetersRequest.h; sourceTree = "<group>"; };
+		1D3CFD6613EDE4280069A094 /* PLServerMetersRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLServerMetersRequest.m; sourceTree = "<group>"; };
+		1D3CFD6B13EDE6130069A094 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		1D3CFD6C13EDE6130069A094 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		1D3CFD6D13EDE6130069A094 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		1D3CFD6E13EDE6130069A094 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		1D3CFD6F13EDE6130069A094 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		1D3CFD7013EDE6130069A094 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		1D3CFD7113EDE6130069A094 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		1D3CFD7213EDE6130069A094 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		1D3CFD7313EDE6130069A094 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		1D3CFD7413EDE6130069A094 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		1D3CFD7513EDE6130069A094 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		1D3CFD7613EDE6130069A094 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		1D3CFD7713EDE6130069A094 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		1D3CFD7813EDE6130069A094 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		1D3CFD7913EDE6130069A094 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		1D3CFD7A13EDE6130069A094 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		1D3CFD7B13EDE6130069A094 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		1D3CFD7C13EDE6130069A094 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		1D3CFD7D13EDE6130069A094 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		1D3CFD7E13EDE6130069A094 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		1D3CFD7F13EDE6130069A094 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		1D3CFD8013EDE6130069A094 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		1D3CFD8113EDE6130069A094 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		1D3CFD9213EDED880069A094 /* PLParkingMapModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLParkingMapModel.h; sourceTree = "<group>"; };
+		1D3CFD9313EDED880069A094 /* PLParkingMapModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLParkingMapModel.m; sourceTree = "<group>"; };
+		1D3CFD9513EDF1910069A094 /* PLParkingStatModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLParkingStatModel.h; sourceTree = "<group>"; };
+		1D3CFD9613EDF1910069A094 /* PLParkingStatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLParkingStatModel.m; sourceTree = "<group>"; };
+		1D3CFD9813EDF29A0069A094 /* PLParkingMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLParkingMap.h; sourceTree = "<group>"; };
+		1D3CFD9913EDF29A0069A094 /* PLParkingMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLParkingMap.m; sourceTree = "<group>"; };
+		1D3CFD9B13EDF30E0069A094 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1D3CFD9D13EDFAA20069A094 /* PLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLLocationManager.h; sourceTree = "<group>"; };
+		1D3CFD9E13EDFAA20069A094 /* PLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLLocationManager.m; sourceTree = "<group>"; };
+		1D3CFDA013EDFBDD0069A094 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1D3CFDA213EE00B90069A094 /* PLMeterBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PLMeterBlock.h; sourceTree = "<group>"; };
+		1D3CFDA313EE00B90069A094 /* PLMeterBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMeterBlock.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D3CFD1C13EDDE420069A094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3CFDA113EDFBDD0069A094 /* CoreLocation.framework in Frameworks */,
+				1D3CFD9C13EDF30E0069A094 /* MapKit.framework in Frameworks */,
+				1D3CFD2413EDDE420069A094 /* UIKit.framework in Frameworks */,
+				1D3CFD2613EDDE420069A094 /* Foundation.framework in Frameworks */,
+				1D3CFD2813EDDE420069A094 /* CoreGraphics.framework in Frameworks */,
+				1D3CFD2A13EDDE420069A094 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D3CFD3E13EDDE430069A094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3CFD4413EDDE430069A094 /* SenTestingKit.framework in Frameworks */,
+				1D3CFD4513EDDE430069A094 /* UIKit.framework in Frameworks */,
+				1D3CFD4613EDDE430069A094 /* Foundation.framework in Frameworks */,
+				1D3CFD4713EDDE430069A094 /* CoreGraphics.framework in Frameworks */,
+				1D3CFD4813EDDE430069A094 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D3CFD1413EDDE420069A094 = {
+			isa = PBXGroup;
+			children = (
+				1D3CFDA013EDFBDD0069A094 /* CoreLocation.framework */,
+				1D3CFD2B13EDDE420069A094 /* Parkalator */,
+				1D3CFD4B13EDDE430069A094 /* ParkalatorTests */,
+				1D3CFD2213EDDE420069A094 /* Frameworks */,
+				1D3CFD2013EDDE420069A094 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D3CFD2013EDDE420069A094 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD1F13EDDE420069A094 /* Parkalator.app */,
+				1D3CFD4213EDDE430069A094 /* ParkalatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D3CFD2213EDDE420069A094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD9B13EDF30E0069A094 /* MapKit.framework */,
+				1D3CFD2313EDDE420069A094 /* UIKit.framework */,
+				1D3CFD2513EDDE420069A094 /* Foundation.framework */,
+				1D3CFD2713EDDE420069A094 /* CoreGraphics.framework */,
+				1D3CFD2913EDDE420069A094 /* CoreData.framework */,
+				1D3CFD4313EDDE430069A094 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D3CFD2B13EDDE420069A094 /* Parkalator */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD6A13EDE6130069A094 /* sbjson */,
+				1D3CFD6913EDE4730069A094 /* Model */,
+				1D3CFD6813EDE4660069A094 /* UI */,
+				1D3CFD6013EDE19B0069A094 /* API */,
+				1D3CFD3413EDDE430069A094 /* ParkalatorAppDelegate.h */,
+				1D3CFD3513EDDE430069A094 /* ParkalatorAppDelegate.m */,
+				1D3CFD3713EDDE430069A094 /* MainWindow.xib */,
+				1D3CFD3A13EDDE430069A094 /* Parkalator.xcdatamodeld */,
+				1D3CFD2C13EDDE420069A094 /* Supporting Files */,
+			);
+			path = Parkalator;
+			sourceTree = "<group>";
+		};
+		1D3CFD2C13EDDE420069A094 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD2D13EDDE420069A094 /* Parkalator-Info.plist */,
+				1D3CFD2E13EDDE420069A094 /* InfoPlist.strings */,
+				1D3CFD3113EDDE430069A094 /* main.m */,
+				1D3CFD3313EDDE430069A094 /* Parkalator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D3CFD4B13EDDE430069A094 /* ParkalatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD5113EDDE430069A094 /* ParkalatorTests.h */,
+				1D3CFD5313EDDE430069A094 /* ParkalatorTests.m */,
+				1D3CFD4C13EDDE430069A094 /* Supporting Files */,
+			);
+			path = ParkalatorTests;
+			sourceTree = "<group>";
+		};
+		1D3CFD4C13EDDE430069A094 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD4D13EDDE430069A094 /* ParkalatorTests-Info.plist */,
+				1D3CFD4E13EDDE430069A094 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D3CFD6013EDE19B0069A094 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD6413EDE40C0069A094 /* Requests */,
+				1D3CFD5D13EDE1960069A094 /* PLServerAPI.h */,
+				1D3CFD5E13EDE1960069A094 /* PLServerAPI.m */,
+				1D3CFD6113EDE3C20069A094 /* PLServerRequest.h */,
+				1D3CFD6213EDE3C20069A094 /* PLServerRequest.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		1D3CFD6413EDE40C0069A094 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD6513EDE4280069A094 /* PLServerMetersRequest.h */,
+				1D3CFD6613EDE4280069A094 /* PLServerMetersRequest.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		1D3CFD6813EDE4660069A094 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD9813EDF29A0069A094 /* PLParkingMap.h */,
+				1D3CFD9913EDF29A0069A094 /* PLParkingMap.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		1D3CFD6913EDE4730069A094 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD9213EDED880069A094 /* PLParkingMapModel.h */,
+				1D3CFD9313EDED880069A094 /* PLParkingMapModel.m */,
+				1D3CFD9513EDF1910069A094 /* PLParkingStatModel.h */,
+				1D3CFD9613EDF1910069A094 /* PLParkingStatModel.m */,
+				1D3CFD9D13EDFAA20069A094 /* PLLocationManager.h */,
+				1D3CFD9E13EDFAA20069A094 /* PLLocationManager.m */,
+				1D3CFDA213EE00B90069A094 /* PLMeterBlock.h */,
+				1D3CFDA313EE00B90069A094 /* PLMeterBlock.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1D3CFD6A13EDE6130069A094 /* sbjson */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CFD6B13EDE6130069A094 /* NSObject+SBJson.h */,
+				1D3CFD6C13EDE6130069A094 /* NSObject+SBJson.m */,
+				1D3CFD6D13EDE6130069A094 /* SBJson.h */,
+				1D3CFD6E13EDE6130069A094 /* SBJsonParser.h */,
+				1D3CFD6F13EDE6130069A094 /* SBJsonParser.m */,
+				1D3CFD7013EDE6130069A094 /* SBJsonStreamParser.h */,
+				1D3CFD7113EDE6130069A094 /* SBJsonStreamParser.m */,
+				1D3CFD7213EDE6130069A094 /* SBJsonStreamParserAccumulator.h */,
+				1D3CFD7313EDE6130069A094 /* SBJsonStreamParserAccumulator.m */,
+				1D3CFD7413EDE6130069A094 /* SBJsonStreamParserState.h */,
+				1D3CFD7513EDE6130069A094 /* SBJsonStreamParserState.m */,
+				1D3CFD7613EDE6130069A094 /* SBJsonStreamWriter.h */,
+				1D3CFD7713EDE6130069A094 /* SBJsonStreamWriter.m */,
+				1D3CFD7813EDE6130069A094 /* SBJsonStreamWriterAccumulator.h */,
+				1D3CFD7913EDE6130069A094 /* SBJsonStreamWriterAccumulator.m */,
+				1D3CFD7A13EDE6130069A094 /* SBJsonStreamWriterState.h */,
+				1D3CFD7B13EDE6130069A094 /* SBJsonStreamWriterState.m */,
+				1D3CFD7C13EDE6130069A094 /* SBJsonTokeniser.h */,
+				1D3CFD7D13EDE6130069A094 /* SBJsonTokeniser.m */,
+				1D3CFD7E13EDE6130069A094 /* SBJsonUTF8Stream.h */,
+				1D3CFD7F13EDE6130069A094 /* SBJsonUTF8Stream.m */,
+				1D3CFD8013EDE6130069A094 /* SBJsonWriter.h */,
+				1D3CFD8113EDE6130069A094 /* SBJsonWriter.m */,
+			);
+			name = sbjson;
+			path = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D3CFD1E13EDDE420069A094 /* Parkalator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D3CFD5713EDDE430069A094 /* Build configuration list for PBXNativeTarget "Parkalator" */;
+			buildPhases = (
+				1D3CFD1B13EDDE420069A094 /* Sources */,
+				1D3CFD1C13EDDE420069A094 /* Frameworks */,
+				1D3CFD1D13EDDE420069A094 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Parkalator;
+			productName = Parkalator;
+			productReference = 1D3CFD1F13EDDE420069A094 /* Parkalator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D3CFD4113EDDE430069A094 /* ParkalatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D3CFD5A13EDDE430069A094 /* Build configuration list for PBXNativeTarget "ParkalatorTests" */;
+			buildPhases = (
+				1D3CFD3D13EDDE430069A094 /* Sources */,
+				1D3CFD3E13EDDE430069A094 /* Frameworks */,
+				1D3CFD3F13EDDE430069A094 /* Resources */,
+				1D3CFD4013EDDE430069A094 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D3CFD4A13EDDE430069A094 /* PBXTargetDependency */,
+			);
+			name = ParkalatorTests;
+			productName = ParkalatorTests;
+			productReference = 1D3CFD4213EDDE430069A094 /* ParkalatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D3CFD1613EDDE420069A094 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = SamStewartApps.com;
+			};
+			buildConfigurationList = 1D3CFD1913EDDE420069A094 /* Build configuration list for PBXProject "Parkalator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D3CFD1413EDDE420069A094;
+			productRefGroup = 1D3CFD2013EDDE420069A094 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D3CFD1E13EDDE420069A094 /* Parkalator */,
+				1D3CFD4113EDDE430069A094 /* ParkalatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D3CFD1D13EDDE420069A094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3CFD3013EDDE420069A094 /* InfoPlist.strings in Resources */,
+				1D3CFD3913EDDE430069A094 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D3CFD3F13EDDE430069A094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3CFD5013EDDE430069A094 /* InfoPlist.strings in Resources */,
+				1D3CFD5213EDDE430069A094 /* ParkalatorTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D3CFD4013EDDE430069A094 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D3CFD1B13EDDE420069A094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3CFD3213EDDE430069A094 /* main.m in Sources */,
+				1D3CFD3613EDDE430069A094 /* ParkalatorAppDelegate.m in Sources */,
+				1D3CFD3C13EDDE430069A094 /* Parkalator.xcdatamodeld in Sources */,
+				1D3CFD5F13EDE1960069A094 /* PLServerAPI.m in Sources */,
+				1D3CFD6313EDE3C20069A094 /* PLServerRequest.m in Sources */,
+				1D3CFD6713EDE4280069A094 /* PLServerMetersRequest.m in Sources */,
+				1D3CFD8213EDE6130069A094 /* NSObject+SBJson.m in Sources */,
+				1D3CFD8313EDE6130069A094 /* SBJsonParser.m in Sources */,
+				1D3CFD8413EDE6130069A094 /* SBJsonStreamParser.m in Sources */,
+				1D3CFD8513EDE6130069A094 /* SBJsonStreamParserAccumulator.m in Sources */,
+				1D3CFD8613EDE6130069A094 /* SBJsonStreamParserState.m in Sources */,
+				1D3CFD8713EDE6130069A094 /* SBJsonStreamWriter.m in Sources */,
+				1D3CFD8813EDE6130069A094 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				1D3CFD8913EDE6130069A094 /* SBJsonStreamWriterState.m in Sources */,
+				1D3CFD8A13EDE6130069A094 /* SBJsonTokeniser.m in Sources */,
+				1D3CFD8B13EDE6130069A094 /* SBJsonUTF8Stream.m in Sources */,
+				1D3CFD8C13EDE6130069A094 /* SBJsonWriter.m in Sources */,
+				1D3CFD9413EDED880069A094 /* PLParkingMapModel.m in Sources */,
+				1D3CFD9713EDF1910069A094 /* PLParkingStatModel.m in Sources */,
+				1D3CFD9A13EDF29A0069A094 /* PLParkingMap.m in Sources */,
+				1D3CFD9F13EDFAA20069A094 /* PLLocationManager.m in Sources */,
+				1D3CFDA413EE00B90069A094 /* PLMeterBlock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D3CFD3D13EDDE430069A094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3CFD5413EDDE430069A094 /* ParkalatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D3CFD4A13EDDE430069A094 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D3CFD1E13EDDE420069A094 /* Parkalator */;
+			targetProxy = 1D3CFD4913EDDE430069A094 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D3CFD2E13EDDE420069A094 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D3CFD2F13EDDE420069A094 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D3CFD3713EDDE430069A094 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D3CFD3813EDDE430069A094 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		1D3CFD4E13EDDE430069A094 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D3CFD4F13EDDE430069A094 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D3CFD5513EDDE430069A094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D3CFD5613EDDE430069A094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D3CFD5813EDDE430069A094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Parkalator/Parkalator-Prefix.pch";
+				INFOPLIST_FILE = "Parkalator/Parkalator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D3CFD5913EDDE430069A094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Parkalator/Parkalator-Prefix.pch";
+				INFOPLIST_FILE = "Parkalator/Parkalator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1D3CFD5B13EDDE430069A094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Parkalator.app/Parkalator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Parkalator/Parkalator-Prefix.pch";
+				INFOPLIST_FILE = "ParkalatorTests/ParkalatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1D3CFD5C13EDDE430069A094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Parkalator.app/Parkalator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Parkalator/Parkalator-Prefix.pch";
+				INFOPLIST_FILE = "ParkalatorTests/ParkalatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D3CFD1913EDDE420069A094 /* Build configuration list for PBXProject "Parkalator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D3CFD5513EDDE430069A094 /* Debug */,
+				1D3CFD5613EDDE430069A094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D3CFD5713EDDE430069A094 /* Build configuration list for PBXNativeTarget "Parkalator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D3CFD5813EDDE430069A094 /* Debug */,
+				1D3CFD5913EDDE430069A094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D3CFD5A13EDDE430069A094 /* Build configuration list for PBXNativeTarget "ParkalatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D3CFD5B13EDDE430069A094 /* Debug */,
+				1D3CFD5C13EDDE430069A094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1D3CFD3A13EDDE430069A094 /* Parkalator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1D3CFD3B13EDDE430069A094 /* Parkalator.xcdatamodel */,
+			);
+			currentVersion = 1D3CFD3B13EDDE430069A094 /* Parkalator.xcdatamodel */;
+			path = Parkalator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1D3CFD1613EDDE420069A094 /* Project object */;
+}
