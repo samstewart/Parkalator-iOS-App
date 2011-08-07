@@ -27,6 +27,6 @@
 #warning Hard coding our location...
     return [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:37.778734661], @"lat", 
                                                         [NSNumber numberWithFloat:-122.4318517401], @"lng", 
-                                                        [NSNumber numberWithFloat:.001], @"radius", nil];
+                                                        [NSNumber numberWithFloat:100], @"radius", nil];
 }
 @end

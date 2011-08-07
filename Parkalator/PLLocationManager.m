@@ -37,7 +37,7 @@ static PLLocationManager *_sharedManager;
 - (void)start  {
     //TODO: enable realtime location updates. Lion broke this in simulator, so we hardcode
 #warning Hardcoded location because lion broke CLLocation simulator support
-    CLLocation *hackLoc = [[CLLocation alloc] initWithLatitude:37.352 longitude:-121.952];
+    CLLocation *hackLoc = [[CLLocation alloc] initWithLatitude:37.778734661 longitude:-122.4318517401];
     [self locationManager:_locManager didUpdateToLocation:hackLoc fromLocation:hackLoc];
     /*
     if ([CLLocationManager locationServicesEnabled])

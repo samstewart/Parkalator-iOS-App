@@ -8,22 +8,9 @@
 
 #import "PLMeterBlock.h"
 
-@implementation PLMeterBlockAnnotation
-@synthesize coordinate=_coordinate;
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)coor {
-    self = [super init];
-    if (self) {
-        _coordinate = coor;
-    }
-    return self;
-}
-- (id)initWithLocation:(CLLocation*)loc {
-    return [self initWithCoordinate:loc.coordinate];
-}
-@end
 @implementation PLMeterBlock
-@synthesize open, close, meterID, beginLoc, endLoc, name, occupied, totalMeters, middleLoc;
+@synthesize open, close, meterID, beginLoc, endLoc, name=_name, occupied, totalMeters, middleLoc, rate=_rate;
 - (id)initWithDict:(NSDictionary*)dict {
     self = [self init];
     if (self) {
@@ -33,6 +20,8 @@
                                                    [[locBegDict objectForKey:@"lng"] floatValue]);
         endLoc = CLLocationCoordinate2DMake([[locEndDict objectForKey:@"lat"] floatValue],
                                                  [[locEndDict objectForKey:@"lng"] floatValue]);
+        _rate = [[dict objectForKey:@"RATE"] floatValue];
+        _name = [[dict objectForKey:@"NAME"] retain];
     }
     return self;
 }
@@ -50,6 +39,30 @@
 
 - (void)dealloc {
     [super dealloc];
+    [_name release], _name = nil;
     //TODO: release all members..
+}
+@end
+
+
+@implementation PLMeterBlockAnnotation
+@synthesize coordinate=_coordinate, title, subtitle, meterBlock=_meterBlock;
+
+- (id)initWithCoordinate:(CLLocationCoordinate2D)coor {
+    self = [super init];
+    if (self) {
+        _coordinate = coor;
+    }
+    return self;
+}
+- (id)initWithLocation:(CLLocation*)loc {
+    return [self initWithCoordinate:loc.coordinate];
+}
+- (void)setMeterBlock:(PLMeterBlock *)meterBlockArg {
+    if (meterBlockArg != _meterBlock)
+        [_meterBlock release], _meterBlock = meterBlockArg;
+
+    self.subtitle = [NSString stringWithFormat:@"Cost: $%.1f", meterBlockArg.rate];
+    self.title = meterBlockArg.name;
 }
 @end

@@ -17,7 +17,7 @@
 @end
 
 @implementation PLParkingMapModel
-@synthesize delegate, radius, mapLocation, refreshRate;
+@synthesize delegate, radius, mapLocation, refreshRate, isRealtime;
 
 - (id)init
 {
@@ -36,12 +36,14 @@
     //start initial request
     [_metersRequest send];
     
-    if (refreshTimer)  [refreshTimer release], refreshTimer = nil;
-    refreshTimer = [[NSTimer scheduledTimerWithTimeInterval:self.refreshRate 
-                                                     target:self 
-                                                   selector:@selector(refreshMeters) 
-                                                   userInfo:nil 
-                                                    repeats:YES] retain];
+    if (self.isRealtime) {
+        if (refreshTimer)  [refreshTimer release], refreshTimer = nil;
+        refreshTimer = [[NSTimer scheduledTimerWithTimeInterval:self.refreshRate 
+                                                         target:self 
+                                                       selector:@selector(refreshMeters) 
+                                                       userInfo:nil 
+                                                        repeats:YES] retain];
+    }
     isRunning = YES;
 }
 #pragma mark Request delegate callback methods
@@ -52,7 +54,7 @@
     
     [metersCache removeAllObjects];
     
-    NSMutableArray *blockLocations = [NSMutableArray arrayWithCapacity:[meters count]];
+    NSMutableArray *blockAnnots = [NSMutableArray arrayWithCapacity:[meters count]];
     
     for (NSDictionary *meterDict in meters) {
         PLMeterBlock *meterBlock = [[PLMeterBlock alloc] initWithDict:meterDict];
@@ -60,10 +62,13 @@
         
         CLLocationCoordinate2D midCoor = meterBlock.middleLoc;
         CLLocation *loc = [[CLLocation alloc] initWithLatitude:midCoor.latitude longitude:midCoor.longitude];
-        [blockLocations addObject:loc];
+        PLMeterBlockAnnotation *annot = [[PLMeterBlockAnnotation alloc] initWithLocation:loc];
+        annot.meterBlock = meterBlock; //bind to meter block..
+        
+        [blockAnnots addObject:annot];
     }
     
-    [delegate meterBlockLocations:blockLocations];
+    [delegate meterBlockAnnotations:blockAnnots];
     
 }
 - (void)requestFailedWithError:(NSError*)jsonError {
@@ -75,6 +80,9 @@
     if (hasLoaded) {
         hasLoaded = NO;
         NSLog(@"Refreshing parking meters..");
+        
+        if (!self.isRealtime)
+            [refreshTimer invalidate];
         
         [_metersRequest send];
         

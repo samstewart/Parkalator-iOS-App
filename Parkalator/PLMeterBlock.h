@@ -12,10 +12,14 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-/** Simple annotation object.*/
+/** Simple annotation object. You can bind it to a PLMeterBlock object..*/
+@class PLMeterBlock;
 @interface PLMeterBlockAnnotation : NSObject <MKAnnotation>
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *subtitle;
+@property (nonatomic, retain) PLMeterBlock *meterBlock;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coor;
 - (id)initWithLocation:(CLLocation*)loc;
@@ -26,6 +30,7 @@
 
 @property (nonatomic, readonly) NSDate *open;
 @property (nonatomic, readonly) NSDate *close;
+@property (nonatomic, readonly) CGFloat rate;
 @property (nonatomic, readonly) NSString *meterID;
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) CLLocationCoordinate2D beginLoc;

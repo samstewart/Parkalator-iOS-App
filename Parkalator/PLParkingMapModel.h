@@ -25,8 +25,8 @@
 /** Called when we load a set of parking meters. You are passed an array of PLMeterBlocks.
  Note: DEPRECATED*/
 - (void)meterBlocksLoaded:(NSArray*)meterBlocks atPage:(NSInteger)index;
-/** Called with an array of CLLocation objects which should be plotted on the map*/
-- (void)meterBlockLocations:(NSArray*)locations;
+/** Called with an array of annotations for the map.*/
+- (void)meterBlockAnnotations:(NSArray*)meterAnnots;
 @end
 
 @class PLServerMetersRequest;
@@ -44,5 +44,6 @@
 @property (nonatomic, assign) CLLocationCoordinate2D mapLocation;
 @property (nonatomic, assign) CGFloat radius;
 @property (nonatomic, assign) NSTimeInterval refreshRate;
+@property (nonatomic, assign) BOOL isRealtime;
 @property (nonatomic, retain) id <PLParkingMapModelDelegate> delegate;
 @end

@@ -19,6 +19,7 @@
     if (self) {
         model = [[PLParkingMapModel alloc] init];
         model.delegate = self;
+        model.isRealtime = NO;
         [model start];
     }
     return self;
@@ -54,14 +55,12 @@
     [locMan start];
 }
 #pragma mark Map model delegate
-- (void)meterBlockLocations:(NSArray *)locations {
+- (void)meterBlockAnnotations:(NSArray *)meterAnnots {
     //clear all annotations
     [map_view removeAnnotations:map_view.annotations];
     
-    for (CLLocation *loc in locations) {
-        PLMeterBlockAnnotation *annot = [[PLMeterBlockAnnotation alloc] initWithLocation:loc];
-        [map_view addAnnotation:annot];
-    }
+    //add new ones..
+    [map_view addAnnotations:meterAnnots];
 }
 #pragma mark MapView delegate
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
